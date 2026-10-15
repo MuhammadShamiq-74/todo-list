@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+      <h1>Todo List</h1>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark/light theme"></button>
+    </header>
+
+    <form id="taskForm" class="task-form">
+      <input type="text" id="taskInput" placeholder="Add a new task..." autocomplete="off" maxlength="200">
+      <button type="submit" class="btn btn-add">Add</button>
+    </form>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+    </div>
+
+    <section class="date-panel">
+      <div class="date-panel-header">
+        <h2>Daily Progress</h2>
+        <span id="weekTotal" class="week-total"></span>
+      </div>
+      <div id="dateBars" class="date-bars"></div>
+      <div id="dateDetails" class="date-details"></div>
+    </section>
+
+
+    <div id="taskList" class="task-list"></div>
+
+    <div class="empty-state" id="emptyState">
+      <p id="emptyText">No tasks to show. Add one above!</p>
+    </div>
+
+    <footer class="app-footer">
+      <span id="taskCount">0 tasks left</span>
+      <button id="clearCompleted" class="btn-clear">Clear completed</button>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
